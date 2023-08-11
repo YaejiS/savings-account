@@ -1,0 +1,34 @@
+<div class="left">
+  <h6>Let’s Set Goal - Part 1</h6>
+  
+  <form class="center">
+    <table class="center">
+       <tr>
+          <mat-form-field floatLabel="always" [style.width.px]=550>
+            <mat-label>Goal Amount</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+       </tr>
+  
+       <tr>
+          <mat-form-field floatLabel="always" [style.width.px]=550>
+             <mat-label>Date</mat-label>
+             <!-- <input matInput placeholder="01/01/2023"> -->
+             <input matInput [matDatepicker]="picker">
+             <mat-hint>In how many months or tears do you want to meet your goal?</mat-hint>
+             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+             <mat-datepicker #picker></mat-datepicker>
+           </mat-form-field>
+       </tr>
+    </table>
+  
+    <!-- <div class="hint">In how many months or tears do you want to meet your goal?</div> -->
+  
+    <div class="body_buttons">
+      <button class="save-button">Save & Exit</button>
+      <!-- <button class="next-button" routerLink="invite-people" (click)="updatePage('/invite-people')">Next</button> -->
+      <button mat-raised-button class="next-button">Next</button>
+    </div>
+  
+  </form>
+</div>
