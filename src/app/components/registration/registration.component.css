@@ -1,0 +1,104 @@
+.registration {
+   display: flex;
+   flex-direction: row;
+   overflow: auto;
+   /* height: calc(100% - (100px)); */
+   width: 100%;
+   height: 100%;
+
+}
+
+.side-bar {
+   display: flex;
+   width: 174px;
+   border-right: 0.5px solid rgb(235, 235, 235);
+   /* height: 100%; */
+   flex-direction: column;
+   align-items: flex-start;
+   flex-shrink: 0;
+
+   background: var(--background-paper-elevation-1, #FFF);
+
+   /* elevation/1 */
+   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+}
+
+.side-bar-list {
+   /* display: flex; */
+   padding: 8px 0px;
+   /* flex-direction: column; */
+   /* align-items: left; */
+   /* align-self: left; */
+   
+}
+
+hr {
+   margin: 0em !important;
+   border-bottom: 0.1px dotted #ffffffda !important;
+   border-width: 0.5px;
+}
+
+/* .mat-tab {
+   flex-direction: row important!;
+   border: 1px solid bue;
+} */
+
+.side-bar-item {
+   align-items: flex-start;
+
+   /* flex-direction: column; */
+   /* align-items: left; */
+   display: flex;
+   padding: 4px 16px;
+
+   /* align-self: stretch; */
+   /* background: var(--primary-states-selected, rgba(33, 150, 243, 0.08)); */
+}
+
+.mdc-list {
+   padding: 0 !important;
+   width: 100% !important;
+}
+
+.white {
+   background-color: white;
+}
+
+.blue {
+   background-color: #2196F314;
+}
+
+.active {
+   color: #673AB7;
+   font-weight: bold!important;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+   padding: 16px 20px !important;
+}
+
+.display {
+   /* border: 1px solid orange; */
+   margin: 30px 40px 60px 40px;
+
+   display: flex;
+   width: calc( 100% - 260px);   /* width: 1005px;
+   height: 548px; */
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex-shrink: 0;
+   
+   border-radius: 4px;
+   background: var(--background-paper-elevation-4, #FFF);
+
+   /* elevation/4 */
+   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.20), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.selectedItem {
+   width: 100%;
+}

@@ -1,0 +1,36 @@
+<div class="registration">
+   
+   <div class="side-bar">
+      <mat-nav-list *ngFor="let item of listItems" 
+               (click)="handleClick(item)" >
+       <!-- <mat-nav-list *ngFor="let item of listItems" (click)="handleClick(item)" class="side-bar-item"> -->
+            <a 
+               class="side-bar-item"
+               [ngClass]="{'blue' : item.clicked, 'white': !item.clicked}"
+               routerLink="item.link"
+               routerLinkActive="active"
+            >
+               <!-- <mat-icon matListIcon>
+   
+               </mat-icon> -->
+            <!-- <a routerLink="item.link"
+               routerLinkActive="active"
+               #rla="routerLinkActive" -->
+               {{item.title}}
+            </a>
+            <hr/>
+       </mat-nav-list>
+   </div>
+      
+   <div class="display">
+      <div class="selectedItem" *ngIf="selectedLink == listItems[0].link">
+         <app-link-bank-account class="selectedItem" (updatePageEvent)="listenForUpdatePageEvent($event)"></app-link-bank-account>
+      </div>
+      <div class="selectedItem" *ngIf="selectedLink == listItems[1].link">
+         <app-invite-people class="selectedItem" (updatePageEvent)="listenForUpdatePageEvent($event)"></app-invite-people>
+      </div>
+      <div class="selectedItem" *ngIf="selectedLink == listItems[2].link">
+         <app-set-goal></app-set-goal>
+      </div>
+   </div>
+</div>
