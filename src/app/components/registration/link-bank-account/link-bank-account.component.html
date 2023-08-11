@@ -1,0 +1,26 @@
+<div class="left">
+
+  <h6>Let’s set up your account</h6>
+  
+  <form class="center">
+    <table class="center">
+       <tr>
+          <mat-form-field floatLabel="always" [style.width.px]=550>
+            <mat-label>Routing Number</mat-label>
+            <input matInput placeholder="">
+          </mat-form-field>
+       </tr>
+  
+       <tr>
+          <mat-form-field floatLabel="always" [style.width.px]=550>
+             <mat-label>Account Number</mat-label>
+             <input matInput placeholder="">
+           </mat-form-field>
+       </tr>
+    </table>
+    <div class="body_buttons">
+      <button class="save-button">Save & Exit</button>
+      <button class="next-button" (click)="updatePage('/invite-people')">Next</button>
+    </div>
+  </form>
+</div>
