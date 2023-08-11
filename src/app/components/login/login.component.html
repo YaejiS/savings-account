@@ -1,0 +1,36 @@
+<div class="login">
+   <div class="logo">collabo</div>
+
+   <form styles="flex-direction:row">
+      <table>
+         <tr>
+            <mat-form-field floatLabel="always" [style.width.px]=550>
+              <mat-label>Email Address</mat-label>
+              <input matInput placeholder="Enter Email Address">
+            </mat-form-field>
+         </tr>
+
+         <tr>
+            <mat-form-field floatLabel="always" [style.width.px]=550>
+               <mat-label>Password</mat-label>
+               <input #passwordInput matInput (keyup)="listener($event)" [value]="passwordValue" placeholder="Enter Password">
+             </mat-form-field>
+         </tr>
+         <tr>
+            <mat-form-field floatLabel="always" [style.width.px]=550>
+               <mat-label>Password</mat-label>
+               <input #maskedOutput matInput [value]="maskedPassword" placeholder="Enter Password">
+             </mat-form-field>
+         </tr>
+      </table>
+
+      <!-- {{passwordValue}}<br/> -->
+      <!-- {{maskedPassword}} -->
+
+      <div class="main_buttons">
+         <button class="signup-button">Sign Up</button>
+         <button class="login-button" routerLink="/registration">Log In</button>
+      </div>
+   
+    </form>
+</div>
