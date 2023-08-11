@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+
+h6 {
+   color: var(--text-primary, rgba(0, 0, 0, 0.87));
+   font-feature-settings: 'clig' off, 'liga' off;
+   /* typography/h6 */
+   font-family: Roboto;
+   font-size: 20px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 160%; /* 32px */
+   letter-spacing: 0.15px;
+   align: left;
+}
+
+.main_buttons {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+}
+
+.body_buttons {
+   display: flex;
+   align-items: right;
+   justify-content: right;
+   gap: 16px;
+}
+
+.save-button {
+   border: none;
+   display: flex;
+   padding: 6px 8px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 4px;
+   /* border-color: #2196F3; */
+   background: var(--primary-main, clear);
+   color: var(--primary-main, #2196F3);
+   font-family: Roboto;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px; /* 171.429% */
+   letter-spacing: 0.4px;
+   text-transform: capitalize;
+}
+
+.next-button {
+   border: none;
+   display: flex;
+   padding: 6px 16px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 4px;
+   background: var(--primary-main, #2196F3);
+   color: var(--primary-main, #FFF);
+   font-family: Roboto;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 24px; /* 171.429% */
+   letter-spacing: 0.4px;
+   text-transform: capitalize;
+}
+
+input {
+   /* border: 1px solid red !important; */
+   /* padding-top: 30px  !important;
+   padding-bottom: 5px  !important; */
+   /* font-family: Roboto;
+   font-size: 16px ;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 24px;
+   letter-spacing: 0.15px; */
+   /* background-color: white !important; */
+}
+
+textarea {
+   padding-top: 30px  !important;
+   padding-bottom: 5px  !important;
+   /* background-color: white !important; */
+}
+
+.mdc-text-field {
+   padding: 0px !important;
+   background-color: white !important;
+}
+
+/* .table {
+   width: 100% !important;
+} */
+
+.center {
+   width: 90%;
+   text-align:center;
+ }
+
+ .left {
+   width: 90%;
+   text-align:left;
+   padding: 10%;
+ }
