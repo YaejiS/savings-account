@@ -79,7 +79,7 @@ textarea {
 
  .left {
    width: 90%;
-   text-align:left;
+   text-alrign:left;
    padding: 10%;
  }
 
@@ -91,6 +91,10 @@ textarea {
 
  ::ng-deep .mdc-form-field-hint-wrapper {
    padding: 0px !important;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+   margin-bottom: -1em;
 }
 
 .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
