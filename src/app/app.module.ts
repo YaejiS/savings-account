@@ -8,7 +8,6 @@ import { InvitePeopleComponent } from './components/registration/invite-people/i
 import { SetGoalComponent } from './components/registration/set-goal/set-goal.component';
 import { SetGoalComponent2 } from './components/registration/set-goal-2/set-goal-2.component';
 import { StatusComponent } from './components/registration/status/status.component';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
