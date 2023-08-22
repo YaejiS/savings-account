@@ -1,7 +1,8 @@
-<div class="left">
+<div class="left" style="margin-bottom: 5%">
 
-  <h6>Let’s set up your account</h6>
-  
+  <h2>Let’s set up your account</h2>
+  <br/>
+
   <form class="center">
     <table class="center">
        <tr>
@@ -11,6 +12,8 @@
           </mat-form-field>
        </tr>
   
+       <br/>
+       
        <tr>
           <mat-form-field floatLabel="always" [style.width.px]=550>
              <mat-label>Account Number</mat-label>
@@ -18,6 +21,8 @@
            </mat-form-field>
        </tr>
     </table>
+
+    <br/>
     <div class="body_buttons">
       <button class="save-button">Save & Exit</button>
       <button class="next-button" (click)="updatePage('/invite-people')">Next</button>
