@@ -12,8 +12,6 @@ export class RegistrationService {
    * based on the tab clicked
    */
   updatePage( updatePageEvent: EventEmitter<string>, endpoint : string ) {
-    // RegistrationComponent.selectedItem = 
-    console.log("FROM LINK PEOPLE: " + endpoint);
     updatePageEvent.emit(endpoint);
   }
 }
