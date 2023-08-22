@@ -3,7 +3,9 @@ import { Component, Input } from '@angular/core';
 enum Link {
   LINK_ACCOUNT = "/link-account",
   INVITE_PEOPLE = "/invite-people",
-  SET_GOAL = "/set-goal"
+  SET_GOAL = "/set-goal",
+  SET_GOAL_2 = "/set-goal-2",
+  STATUS = "/status"
 }
 
 @Component({
@@ -13,12 +15,11 @@ enum Link {
 })
 export class RegistrationComponent {
 
-  // clicked = false;
-
   listItems = [
     { title: 'Link Bank Account', link: Link.LINK_ACCOUNT, clicked: true},
     { title: 'Invite People', link: Link.INVITE_PEOPLE, clicked: false},
-    { title: 'Set Goal', link: Link.SET_GOAL, clicked: false}
+    { title: 'Set Goal - Part I', link: Link.SET_GOAL, clicked: false},
+    { title: 'Set Goal - Part II', link: Link.SET_GOAL_2, clicked: false},
   ]
   
   selectedLink : any = this.listItems[0].link;
@@ -26,31 +27,27 @@ export class RegistrationComponent {
   handleClick( listItem : any ) {
     this.selectedLink = listItem.link;
     this.updateClick(listItem);
-    // listItem.clicked = !listItem.clicked
   }
 
   listenForUpdatePageEvent(link: any) {   
-    console.log("LINK: " + link);
 
     if (link == Link.LINK_ACCOUNT) {
       this.selectedLink = this.listItems[0].link;
       this.updateClick(this.listItems[0]);
-      console.log("LINK ACCOUNT: " + this.listItems[0].title);
 
     } else if (link == Link.INVITE_PEOPLE) {
       this.selectedLink = this.listItems[1].link;
       this.updateClick(this.listItems[1]);
 
-      console.log("INVITE PEOPLE: " + this.listItems[1].title);
-
-    } else {
+    } else if (link == Link.SET_GOAL) {
       this.selectedLink = this.listItems[2].link;
       this.updateClick(this.listItems[2]);
+      
+    } else if (link == Link.SET_GOAL_2) {
+      this.selectedLink = this.listItems[3].link;
+      this.updateClick(this.listItems[3]);
 
-      console.log("SET GOAL: " + this.listItems[2].title);
-      console.log("SELECTED ITEM: " + this.selectedLink);
-    }
-
+    } 
   }
 
   updateClick(listItem: any) {

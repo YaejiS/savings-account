@@ -3,19 +3,8 @@
    <div class="side-bar">
       <mat-nav-list *ngFor="let item of listItems" 
                (click)="handleClick(item)" >
-       <!-- <mat-nav-list *ngFor="let item of listItems" (click)="handleClick(item)" class="side-bar-item"> -->
-            <a 
-               class="side-bar-item"
-               [ngClass]="{'blue' : item.clicked, 'white': !item.clicked}"
-               routerLink="item.link"
-               routerLinkActive="active"
-            >
-               <!-- <mat-icon matListIcon>
-   
-               </mat-icon> -->
-            <!-- <a routerLink="item.link"
-               routerLinkActive="active"
-               #rla="routerLinkActive" -->
+         <a class="side-bar-item"
+            [ngClass]="{'blue' : item.clicked, 'white': !item.clicked}">
                {{item.title}}
             </a>
             <hr/>
@@ -30,7 +19,10 @@
          <app-invite-people class="selectedItem" (updatePageEvent)="listenForUpdatePageEvent($event)"></app-invite-people>
       </div>
       <div class="selectedItem" *ngIf="selectedLink == listItems[2].link">
-         <app-set-goal></app-set-goal>
+         <app-set-goal class="selectedItem" (updatePageEvent)="listenForUpdatePageEvent($event)"></app-set-goal>
+      </div>
+      <div class="selectedItem" *ngIf="selectedLink == listItems[3].link">
+         <app-set-goal-2 class="selectedItem" (updatePageEvent)="listenForUpdatePageEvent($event)"></app-set-goal-2>
       </div>
    </div>
 </div>
