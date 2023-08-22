@@ -1,7 +1,6 @@
 import { Component, EventEmitter, NgZone, Output } from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
 import { RegistrationService } from 'src/app/services/registration.service';
+
 
 @Component({
   selector: 'app-set-goal-2',
@@ -10,8 +9,12 @@ import { RegistrationService } from 'src/app/services/registration.service';
 })
 export class SetGoalComponent2 {
 
-  // @Output() updatePageEvent = new EventEmitter<string>();
+  @Output() updatePageEvent = new EventEmitter<string>();
 
-  constructor( private dialog: MatDialog ) {}
+  constructor( private service : RegistrationService ) {}
+
+  updatePage( endpoint : string ) {
+    this.service.updatePage( this.updatePageEvent, endpoint );
+  }
 
 }

@@ -1,33 +1,48 @@
-<div class="left">
-  <h6>Let’s Set Goal - Part 1</h6>
-  
+<div class="left" style="margin-bottom: 5%">
+  <h2>Let’s Set Goal - Part 1</h2>
+  <br/>
+
   <form class="center">
-    <table class="center">
-       <tr>
-          <mat-form-field floatLabel="always" [style.width.px]=550>
-            <mat-label>Goal Amount</mat-label>
-            <input matInput placeholder="">
-          </mat-form-field>
-       </tr>
-  
-       <tr>
-          <mat-form-field floatLabel="always" [style.width.px]=550>
-             <mat-label>Date</mat-label>
-             <!-- <input matInput placeholder="01/01/2023"> -->
-             <input matInput [matDatepicker]="picker">
-             <mat-hint>In how many months or tears do you want to meet your goal?</mat-hint>
-             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-             <mat-datepicker #picker></mat-datepicker>
+    <table class="left" >
+
+        <tr class="">
+           <mat-form-field floatLabel="always" [style.width.px]=550>
+             <mat-label>Goal Amount</mat-label>
+             <input matInput currencyMask placeholder="" [options]="{ align:'left' }">
            </mat-form-field>
-       </tr>
+        </tr>
+
+        <br/>
+   
+        <tr class="">
+           <mat-form-field floatLabel="always" [style.width.px]=550>
+              <mat-label>Date</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <div style="font-size: 12px; color: rgba(0, 0, 0, 0.6)">In how many months or years do you want to meet your goal?</div>
+        </tr>
+       <br>
+        <tr class="">
+            <div style="text-align:left; width:90%">
+              <div style="color: rgba(0, 0, 0, 0.6)">Every</div>
+              <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Week</mat-radio-button>
+                <mat-radio-button value="2">2 weeks</mat-radio-button>
+                <mat-radio-button value="2">Month</mat-radio-button>
+                <br/>
+                <div style="font-size: 12px; color: rgba(0, 0, 0, 0.6)">Set the recurring transfer</div>
+              </mat-radio-group>
+            </div>
+        </tr>
+
     </table>
   
-    <!-- <div class="hint">In how many months or tears do you want to meet your goal?</div> -->
-  
+    <br/>
     <div class="body_buttons">
       <button class="save-button">Save & Exit</button>
-      <!-- <button class="next-button" routerLink="invite-people" (click)="updatePage('/invite-people')">Next</button> -->
-      <button mat-raised-button class="next-button">Next</button>
+      <button class="next-button" (click)="updatePage('/set-goal-2')">Next</button>
     </div>
   
   </form>

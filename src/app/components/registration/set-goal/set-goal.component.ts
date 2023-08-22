@@ -1,6 +1,4 @@
-import { Component, EventEmitter, NgZone, Output } from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RegistrationService } from 'src/app/services/registration.service';
 
 @Component({
@@ -12,26 +10,9 @@ export class SetGoalComponent {
 
   @Output() updatePageEvent = new EventEmitter<string>();
 
-  constructor( private dialog: MatDialog ) {}
+  constructor( private service : RegistrationService ) {}
 
-  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(Confirmation, {
-      width: '250px'
-    });
-  }
-
-
-}
-
-@Component({
-  selector: 'confirmation',
-  templateUrl: 'confirmation.html',
-})
-export class Confirmation {
-
-  constructor(private dialogRef: MatDialogRef<Confirmation>) {}
-
-  closeDialog() {
-    this.dialogRef.close(true);
+  updatePage( endpoint : string ) {
+    this.service.updatePage( this.updatePageEvent, endpoint );
   }
 }
