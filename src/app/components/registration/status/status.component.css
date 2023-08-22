@@ -1,0 +1,15 @@
+.image_container {
+   display: grid;
+   height: 100%;
+}
+
+.image {
+   max-width: 90%;
+   max-height: 100vh;
+}
+
+.h2 {
+   font-size: 28px;
+   margin-right: 5%;
+ }
+ 
