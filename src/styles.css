@@ -1,17 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
 
-h6 {
-   color: var(--text-primary, rgba(0, 0, 0, 0.87));
-   font-feature-settings: 'clig' off, 'liga' off;
-   /* typography/h6 */
-   font-family: Roboto;
-   font-size: 20px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 160%; /* 32px */
-   letter-spacing: 0.15px;
-   align: left;
+h2 {
+   font-weight: normal !important;
+} 
+
+h1 {
+   font-weight: normal !important;
 }
 
 .main_buttons {
@@ -36,14 +31,13 @@ h6 {
    justify-content: center;
    align-items: center;
    border-radius: 4px;
-   /* border-color: #2196F3; */
    background: var(--primary-main, clear);
    color: var(--primary-main, #2196F3);
    font-family: Roboto;
    font-size: 14px;
    font-style: normal;
    font-weight: 500;
-   line-height: 24px; /* 171.429% */
+   line-height: 24px;
    letter-spacing: 0.4px;
    text-transform: capitalize;
 }
@@ -63,38 +57,20 @@ h6 {
    font-size: 14px;
    font-style: normal;
    font-weight: 500;
-   line-height: 24px; /* 171.429% */
+   line-height: 24px;
    letter-spacing: 0.4px;
    text-transform: capitalize;
-}
-
-input {
-   /* border: 1px solid red !important; */
-   /* padding-top: 30px  !important;
-   padding-bottom: 5px  !important; */
-   /* font-family: Roboto;
-   font-size: 16px ;
-   font-style: normal;
-   font-weight: 400;
-   line-height: 24px;
-   letter-spacing: 0.15px; */
-   /* background-color: white !important; */
 }
 
 textarea {
    padding-top: 30px  !important;
    padding-bottom: 5px  !important;
-   /* background-color: white !important; */
 }
 
 .mdc-text-field {
    padding: 0px !important;
    background-color: white !important;
 }
-
-/* .table {
-   width: 100% !important;
-} */
 
 .center {
    width: 90%;
@@ -106,3 +82,17 @@ textarea {
    text-align:left;
    padding: 10%;
  }
+
+ .right {
+   width: 90%;
+   text-align:right;
+   padding: 10%;
+ }
+
+ ::ng-deep .mdc-form-field-hint-wrapper {
+   padding: 0px !important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+   color: rgba(0, 0, 0, 0.42) !important;
+}
